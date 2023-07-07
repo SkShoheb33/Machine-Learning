@@ -7,8 +7,6 @@ class TextClassification:
         self.negative_prior = {}
         self.positive_table,self.negative_table = self.divide_sets()
         p,n,v = len(positive_set),len(negative_set),len(self.vocabulary)
-        self.positive_prior = {}
-        self.negative_prior = {}
     def extract_vocabulary(self):
         for text in self.train['text']:
             text = text.lower()
